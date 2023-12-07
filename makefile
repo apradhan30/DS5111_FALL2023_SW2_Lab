@@ -4,13 +4,13 @@ default:
 
 env:
 	python3 -m venv env
-	source env/bin/activate && pip install -r requirements.txt
+	. env/bin/activate && pip install -r requirements.txt
 
 
 run:
-	@bin/clockdemo_param.py >/dev/null 2>&1
+	@python bin/clockdeco_param.py
 
 .PHONY: test
 
 test:
-	pytest -vv tests
+	pytest -vv test
