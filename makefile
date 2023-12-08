@@ -16,4 +16,5 @@ test:
 	pytest -vv test
 
 lint:
+	pip list
 	pylint bin/perceptron.py
