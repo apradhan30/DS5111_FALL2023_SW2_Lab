@@ -16,6 +16,11 @@ def clock(fmt=DEFAULT_FMT):
         return clocked  
     return decorate  
 
+@clock()
+def snooze5111(seconds):
+    time.sleep(seconds)
+    return str(seconds)
+
 if __name__ == '__main__':
 
     @clock()  
@@ -24,3 +29,5 @@ if __name__ == '__main__':
 
     for i in range(3):
         snooze(.123)
+
+
